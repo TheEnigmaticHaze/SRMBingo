@@ -1,6 +1,7 @@
 # SRMBingo
 A Project for School
-I hope it helps :)
+
+A coping mechanism bingo! I hope it helps :)
 
 
 ### Just download what's in the "toDownload" folder to use the application, or compile the source code yourself if you can & want to 
