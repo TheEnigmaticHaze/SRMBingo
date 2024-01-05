@@ -213,6 +213,7 @@ void playBingo(Board board, TrieNode *root)
 
     if(command == COMMAND_BINGO_QUIT)
     {
+      printf("quitting\n");
       return;
     }
 
@@ -221,6 +222,7 @@ void playBingo(Board board, TrieNode *root)
     switch(command)
     {
       case COMMAND_BINGO_NONE:
+        printf("not a valid command...\n");
         break;
       case COMMAND_BINGO_VIEW:
         tile = parseTileName(end + 1);
@@ -260,6 +262,7 @@ void playBingo(Board board, TrieNode *root)
         printBoard(board);
         break;
       case COMMAND_BINGO_QUIT:
+        printf("quitting\n");
         return;
         break;
       default:

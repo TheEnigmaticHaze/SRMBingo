@@ -151,6 +151,7 @@ int main()
     switch(command)
     {
       case COMMAND_NONE:
+        printf("not a valid command...\n");
         break;
       case COMMAND_HELP:
         printHelp();

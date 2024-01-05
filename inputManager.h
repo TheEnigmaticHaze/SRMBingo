@@ -34,7 +34,6 @@ const char bingoCommands[6][MAX_BINGO_COMMAND_LENGTH + 1] =
   "check",
   "uncheck",
   "board",
-  "restart",
   "quit"
 };
 
@@ -74,8 +73,14 @@ void trieAddWord(const char *str, Command command, CommandBingo bingoCommand, Tr
 {
   if(*str == '\0')
   {
-    root->type = root->type ? root->type : command;
-    root->bingoType = root->bingoType ? root->bingoType : bingoCommand;
+    if(command != COMMAND_NONE)
+    {
+      root->type = command;
+    }
+    if(bingoCommand != COMMAND_BINGO_NONE)
+    {
+      root->bingoType = bingoCommand;
+    }
     return;
   }
 
