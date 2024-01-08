@@ -168,7 +168,7 @@ int main()
         Board board = boardCreate(PROMPTS_FILE_PATH, promptCount);
         playBingo(board, root);
         printf("type anything to quit\n");
-        fgets(buffer, 1, stdin);
+        fgets(buffer, 2, stdin);
         return 0;
       }
       case COMMAND_SHOW:

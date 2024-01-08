@@ -271,6 +271,7 @@ void playBingo(Board board, TrieNode *root)
 
     if(checkWin(board))
     {
+      printBoard(board);
       printf("you win!\n");
       return;
     }
