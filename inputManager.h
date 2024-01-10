@@ -3,8 +3,8 @@
 
 const int BUFFER_SIZE = 1024;
 
-const int MAX_COMMAND_LENGTH = 6;
-const int MAX_BINGO_COMMAND_LENGTH = 7;
+#define MAX_COMMAND_LENGTH 6
+#define MAX_BINGO_COMMAND_LENGTH 7
 
 const char commands[6][MAX_COMMAND_LENGTH + 1] = 
 {
@@ -52,7 +52,7 @@ typedef struct TrieNode
 {
   Command type;
   CommandBingo bingoType;
-  TrieNode *next[26];
+  struct TrieNode *next[26];
 } TrieNode;
 
 TrieNode *trieNodeCreate(Command type, CommandBingo bingoType)
